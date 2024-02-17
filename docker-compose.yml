@@ -1,13 +1,13 @@
-service:
+services:
   apps:
-  build: ./apps
-  container-name: ct-apps-ahmad
-  image: latdockerafara/apps-ahmad
-  restart: always
-  port:
-    - "3000:3000"
-  volumes:
-    - apps-data:/app/public/images
+    build: ./apps
+    container-name: ct-apps-ahmad
+    image: latdockerafara/apps-ahmad
+    restart: always
+    port:
+      - "3000:3000"
+    volumes:
+      - apps-data:/app/public/images
 
 volumes:
   apps-data:
