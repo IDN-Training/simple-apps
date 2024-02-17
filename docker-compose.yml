@@ -1,7 +1,7 @@
 services:
   apps:
     build: ./apps
-    container-name: ct-apps-ahmad
+    container-name: ct-compose-apps-ahmad
     image: latdockerafara/apps-ahmad
     restart: always
     port:
