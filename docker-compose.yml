@@ -5,7 +5,7 @@ services:
     image: latdockerafara/apps-ahmad
     restart: always
     ports:
-      - "3000:3000"
+      - "5000:3000"
     volumes:
       - apps-data:/app/public/images
 
