@@ -19,6 +19,10 @@ pipeline {
         stage('Testing') {
             steps {
                 echo "testing"
+                sh '''
+                npm test
+                npm run test:coverage
+                '''
             }
         }
 
