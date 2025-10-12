@@ -8,5 +8,13 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/15ahmadsolihin/simple-apps.git'
             }
         }
+        stage ('unit testing'){
+            steps {
+                sh '''
+                npm install
+                npm test
+                npm test:coverage'''
+            }
+        }
     }
 }
