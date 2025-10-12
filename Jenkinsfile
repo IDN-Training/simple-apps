@@ -25,5 +25,13 @@ pipeline{
                 -Dsonar.login=sqp_a4251e1e8a9ec0b3b00aa35c24e2c58ab8f78fdf'''
             }
         }
+        stage('Deploy compose') {
+            steps {
+                sh '''
+                docker compose build
+                docker compose up -d
+                '''
+            }
+        }
     }
 }
