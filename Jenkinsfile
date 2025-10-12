@@ -33,5 +33,14 @@ pipeline{
                 '''
             }
         }
+        stage('push image to dockerhub') {
+            steps {
+                sh '''
+                docker build -t ahmadsolihin/simple-apps-pipeline-apps 
+                docker push ahmadsolihin/simple-apps-pipeline-apps 
+                docker images prune -a -f
+                '''
+            }
+        }
     }
 }
