@@ -1,6 +1,6 @@
 pipeline{
     agent { label 'devops1-AhmadSolihin'}
-    tool  { nodejs 'NodeJS18.16.0'}
+    tools  { nodejs 'NodeJS18.16.0'}
 
     stages{
         stage('git Clone SCM'){
