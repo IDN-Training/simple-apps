@@ -1,4 +1,7 @@
-FROM ubuntu:22.04
-RUN apt update -y && apt install nginx -y
-ADD index.html /var/www/html/
-CMD nginx -g "daemon off;"
+FROM node:20-slim
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
