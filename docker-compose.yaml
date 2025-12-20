@@ -1,4 +1,4 @@
-name: app
+name: simple-apps
 
 services:
   app:
