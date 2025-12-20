@@ -1,6 +1,7 @@
-FROM node:18.16.0
+FROM node:20-slim
 WORKDIR /app
-ADD . /app
+COPY package*.json ./
 RUN npm install
-CMD npm start
+COPY . .
 EXPOSE 3000
+CMD ["npm", "start"]
