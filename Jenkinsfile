@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'devops1-nama' }
+    agent { label 'server6-solihin' }
 
     stages {
         stage('Pull SCM') {
